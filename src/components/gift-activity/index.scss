@@ -1,0 +1,122 @@
+.gift-activity {
+  .gift-activity-levels {
+    padding: 10px 0;
+    .gift-activity-level {
+      margin: 0 0 16px 0;
+      .level-title {
+        padding: 8px 0;
+        line-height: 22px;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #333333;
+      }
+      .level-container {
+        position: relative;
+        padding: 32px;
+        background-color: #f2f1f6;
+      }
+      .level-rule {
+        .rule-label {
+          padding: 6px 0 0 0;
+          display: inline-block;
+          vertical-align: top;
+        }
+        .rule-input-list {
+          display: inline-block;
+          vertical-align: top;
+        }
+        .rule-input-wrapper {
+          padding: 0 0 16px 0;
+          font-size: 0;
+          .rule-input-prefix {
+            font-size: 14px;
+            padding: 0 10px 0 10px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .rule-input {
+            width: 428px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .has-error .ant-input,
+          .has-error .ant-input:hover {
+            background-color: #fff;
+            border-color: #f5222d;
+          }
+
+          .has-error .ant-input:focus {
+            border-color: #ff4d4f;
+            border-right-width: 1px !important;
+            outline: 0;
+            -webkit-box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+            box-shadow: 0 0 0 2px rgba(245, 34, 45, 0.2);
+          }
+
+          .has-error .ant-input:not([disabled]):hover {
+            border-color: #f5222d;
+          }
+        }
+      }
+      .level-gift {
+        .gift-container {
+          .gift-label {
+            padding: 6px 0 0 0;
+            display: inline-block;
+            vertical-align: top;
+          }
+          .gift-btn-wrapper {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 0;
+            .gift-btn-prefix {
+              font-size: 14px;
+              padding: 0 10px 0 10px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+            .gift-btn {
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      .level-delete-btn {
+        width: 16px;
+        height: 16px;
+        line-height: 12px;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        border: 1px dashed #666666;
+        border-radius: 0;
+        .anticon {
+          font-size: 12px !important;
+          color: #999999 !important;
+        }
+        &:hover {
+          border: 1px dashed #1890ff;
+          .anticon {
+            color: #1890ff !important;
+          }
+        }
+      }
+    }
+  }
+  .gift-activity-add {
+    padding: 0 0 16px 0;
+    .activity-add-btn {
+    }
+    .activity-add-tip {
+      padding: 0 0 0 12px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #999999;
+    }
+  }
+}

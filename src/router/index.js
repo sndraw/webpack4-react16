@@ -42,6 +42,10 @@ const ExamplePage = Loadable({
     loading: LoadingComponent
 });
 
+const TestPage = Loadable({
+  loader: () => import(/* webpackChunkName: "TestPage" */'@/pages/Test'),
+  loading: LoadingComponent
+});
 export  default (
     <RouterContainer>
       <Switch>
@@ -54,6 +58,7 @@ export  default (
         </Route>
         <Route exact path="/login" component={LoginPage}></Route>
         <Route exact path="/example" component={ExamplePage}></Route>
+        <Route exact path="/test" component={TestPage}></Route>
         <Redirect to="/admin"></Redirect>
       </Switch>
     </RouterContainer>
