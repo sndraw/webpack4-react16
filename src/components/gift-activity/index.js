@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Form, Icon, Button, Input } from "antd";
+import { Icon, Button, Input } from "antd";
 import GiftList from "./gift-list";
 
 import "./index.scss";
@@ -97,6 +97,8 @@ class LevelList extends React.Component {
       .replace("$#$", ".");
     // 只能输入两位小数
     newValue = newValue.replace(/^(\-)*(\d+)\.(\d\d).*$/, "$1$2.$3");
+    //去掉前缀零
+    newValue = newValue.replace(/^(0+)[^\.]/g, "");
     return newValue;
   };
   // 修改总金额
@@ -124,6 +126,11 @@ class LevelList extends React.Component {
     const newLevels = levels.map(item => {
       if (item.id === id) {
         item.addMoney = value;
+        if (!value) {
+          item.addMoneyError = true;
+        } else {
+          item.addMoneyError = false;
+        }
       }
       return item;
     });
@@ -140,7 +147,7 @@ class LevelList extends React.Component {
       return (
         <div key={level.id} className="gift-activity-level">
           <div className="level-title">层级{this.getCNNum(index + 1)}</div>
-          <div className="level-container ant-form">
+          <div className="level-container">
             <div className="level-rule">
               <label className="rule-label">条件：</label>
               <div className="rule-input-list">
